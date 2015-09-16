@@ -113,6 +113,7 @@ public interface ChaiProvider {
         OPEN_LDAP,
         DIRECTORY_SERVER_389,
         ORACLE_DS,
+        FORGEROCK_OPENDJ,
         MICROSOFT_ACTIVE_DIRECTORY,
     }
 

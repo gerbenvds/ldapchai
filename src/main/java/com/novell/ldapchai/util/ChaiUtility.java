@@ -448,6 +448,20 @@ public class ChaiUtility {
                     }
                 }
 
+                { // try to detect ForgeRock OpenDJ
+                    for (final String vendorVersionValue : vendorVersions) {
+                        if (vendorVersionValue.contains("OpenDJ")) {
+                            return ChaiProvider.DIRECTORY_VENDOR.FORGEROCK_OPENDJ;
+                        }
+                    }
+                    for (final String vendorNamesValue : vendorNames) {
+                        if (vendorNamesValue.contains("ForgeRock")) {
+                            return ChaiProvider.DIRECTORY_VENDOR.FORGEROCK_OPENDJ;
+                        }
+                    }
+                }
+
+
 
                 { // try to detect 389 Directory
                     for (final String vendorNamesValue : vendorNames) {
